@@ -1,0 +1,26 @@
+{{ define "body_class" }} post-template {{ end }}
+
+{{ define "main" }}
+
+{{- partial "header.html" $ -}}
+
+<main>
+    <article>
+
+            <h1>{{ .Title }}</h1>
+            {{ if .Params.subtitle  }}
+            <section class="post-page-subtitle">
+                {{ .Params.subtitle }}
+            </section>
+            {{ end }}
+        <section>
+            <div class="post-content">
+            {{ .Content }}
+            </div>
+        </section>
+
+    </article>
+</main>
+
+
+{{ end }}

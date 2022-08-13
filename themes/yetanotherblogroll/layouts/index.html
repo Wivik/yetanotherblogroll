@@ -1,0 +1,31 @@
+{{ define "body_class" }} home-template {{ end }}
+
+{{ define "main" }}
+
+{{- partial "header.html" . -}}
+
+<p>Yet Another Blogroll is a manually-curated personal, independent and regurlarly updated blogs directory. Nothing more !</p>
+
+<details>
+  <summary>Browse our sections</summary>
+  <ul>
+  {{ range .Site.Sections }}
+    <li><a href="#{{ .Section }}">{{ .Title }}</a></li>
+  {{ end }}
+  </ul>
+</details>
+
+
+{{- $rssIcon := resources.Get "icons/rss.png" -}}
+{{ range .Site.Sections }}
+<h2>{{ .Title }}</h2>
+<a name="{{ .Section }}"></a>
+    <ul>
+      {{ range .Pages }}
+        <li><a href="{{ .Page.Params.link }}" target="_blank">{{ .Title }}</a> - {{ .Page.Params.description }}{{ with .Page.Params.rss_feed }} <a href="{{ . }}" target="_blank"><img src="{{ $rssIcon.Permalink }}" /></a>{{ end }}</li>
+      {{ end }}
+    </ul>
+
+{{ end }}
+
+{{ end }}

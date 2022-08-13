@@ -1,0 +1,30 @@
+baseURL: 'https://yetanotherblogroll.org'
+languageCode: 'en-US'
+title: 'Yet Another Blogroll'
+theme: "yetanotherblogroll"
+params:
+  description: 'Another manually curated blogs directory'
+
+menu:
+  main:
+    - identifier: "home"
+      name: "Home"
+      url: "/"
+      weight: 10
+    - identifier: "new"
+      name: "New blogs added"
+      url: "/new/"
+      weight: 20
+    - identifier: "submit"
+      name: "Submit a Blog"
+      url: "/submit/"
+      weight: 30
+    - identifier: "about"
+      name: "About"
+      url: "/about/"
+      weight: 40
+
+disableKinds:
+- taxonomy
+- term
+
