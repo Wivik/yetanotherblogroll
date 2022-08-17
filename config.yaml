@@ -12,8 +12,8 @@ menu:
       url: "/"
       weight: 10
     - identifier: "new"
-      name: "New blogs added"
-      url: "/new/"
+      name: "New blogs added (RSS)"
+      url: "/index.xml"
       weight: 20
     - identifier: "submit"
       name: "Submit a Blog"
