@@ -1,0 +1,37 @@
+name: Test build
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - .github/**
+
+jobs:
+  hugobuild:
+    name: Hugo Build
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup hugo context
+        uses: peaceiris/actions-hugo@v2.4.13
+        with:
+          hugo-version: 'latest'
+          # extended: true
+
+      - name: Caching modules
+        uses: actions/cache@v2
+        with:
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
+      - name: Hugo build
+        run: hugo --minify
+
+
