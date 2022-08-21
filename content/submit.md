@@ -22,7 +22,7 @@ The reciprocal link page is a link back to us. That's not mandatory to appear on
 
 ### By email
 
-Send the expected inputs by email to `submit` at this website domain.
+Send the expected inputs by email to `hello` at this website domain.
 
 ### On GitHub
 
