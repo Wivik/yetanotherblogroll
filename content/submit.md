@@ -15,6 +15,7 @@ As the directory is humanly curated, each submission will be treated case by cas
 - The blog description
 - The blog RSS Feed URL (optional)
 - The reciprocal link page (optional)
+- The category (suggest one if missing)
 
 The reciprocal link page is a link back to us. That's not mandatory to appear on this Blogroll, but the requests who gives a link back will be examinated in priority as a gratitude recognition.
 
